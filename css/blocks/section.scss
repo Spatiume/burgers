@@ -1,0 +1,33 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: rem(650px); 
+  object-fit: cover;
+
+  &--align--top{
+    justify-content: flex-start;
+  }
+}
+
+.section__title{
+  font-size: rem(72px);
+  color: $yellow;
+  margin-bottom: rem(31px);
+  @include gagalin();
+  line-height: 1;
+  margin-bottom: 15px;
+  
+  &--centered{
+    text-align: center;
+  }
+
+  &--color-black{
+    color: $black;
+  }
+  &--color-white{
+    color: white;
+    line-height: 66px;
+  }
+}

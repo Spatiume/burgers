@@ -1,0 +1,63 @@
+.burgermenu {
+  background: url("../img/bg/bg5.png") center center / cover no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+
+.burgermenu-list {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 240px;
+  height: 100%;
+}
+
+.burgermenu__title {
+  position: absolute;
+  left: 95px;
+  top: 100px;
+}
+
+.burgermenu__trigger {
+  text-decoration: none;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 31%;
+
+  &__title {
+    @include gagalin();
+    font-weight: normal;
+    font-size: 41px;
+    letter-spacing: -1px;
+    color: white;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transform: rotate(270deg);
+
+  }
+}
+
+
+
+
+.burgermenu__meat-eaters {
+
+  background: url("../img/burgermenu/1.png") center center / cover no-repeat;
+}
+
+
+.burgermenu__vegan {
+
+  background: url("../img/burgermenu/2.png") center center / cover no-repeat;
+}
+
+.burgermenu__dietary {
+  background: url("../img/burgermenu/3.png") center center / cover no-repeat;
+}

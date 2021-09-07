@@ -1,0 +1,42 @@
+.fullscreen-menu {
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+  background: $black;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+
+  .fullscreen-menu__close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 36px;
+
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: -4px;
+      width: 36px;
+      height: 6px;
+      border-radius: 1px;
+      background: white;
+    }
+
+    &::before{
+      transform: rotate(45deg);
+    }
+
+    &::after{
+      transform: rotate(-45deg);
+    }
+
+
+  }
+}

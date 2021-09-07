@@ -1,0 +1,14 @@
+.features {
+  background: url('../img/bg/bg2.png') center center / cover no-repeat;
+  display: flex;
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 11px 25px 10px;
+}
+
+.features__item {
+  width: calc(100%/3 - 26px); //Расчитываем саму ширину элементов 
+}

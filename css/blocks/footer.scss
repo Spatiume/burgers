@@ -1,0 +1,38 @@
+.footer {
+  height: rem(60px);
+  background: url('../img/bg/bg9.png') center center / cover no-repeat;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__col {
+  width: 50%;
+  padding: 0% 0%;
+
+  &--left {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+}
+
+.footer__adress {
+  display: block;
+  color: white;
+  letter-spacing: -1px;
+  padding: 3px 0px;
+}
+
+.footer__phone {
+  display: block;
+  color: $orange;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}

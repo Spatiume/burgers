@@ -1,0 +1,41 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//normalize
+@import "_misc/normalize.scss";
+
+// setups
+@import "_misc/mixins";
+@import "_misc/media";
+@import "_misc/fonts";
+@import "_misc/layout";
+
+//components
+@import "./blocks/sprite.scss";
+@import "./blocks/section.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/scroll-down.scss";
+@import "./blocks/features.scss";
+@import "./blocks/feature.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/review.scss";
+@import "./blocks/order.scss";
+@import "./blocks/order-section.scss";
+@import "./blocks/fixed-menu.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/hamburger-menu-link.scss";
+@import "./blocks/team.scss";
+@import "./blocks/acardeon-team.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/slidermenu.scss";
+@import "./blocks/burgermenu.scss";
+@import "./blocks/work.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/fullscreen-menu.scss";

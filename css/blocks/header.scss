@@ -1,25 +1,30 @@
 .header{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-top: rem(11px);
+  padding-top: 1.25%;
+  flex: 0 0 auto;
+  justify-content: space-between;
+
+  @include tablets {
+    padding-left: 1%;
+    padding-right: 9%;
+  }
 }
 
 .header__logo{
-  min-width: rem(90px);
+  max-width: 90px;
+  flex: 0 0 auto;
 }
-
 
 .logo{
   display: block;
 }
 
-
-
 .header__menu{
   display: flex;
   align-items: center;
   width: 100%;
+  flex: 1;
   justify-content: flex-end;
 
   @include tablets{
@@ -30,6 +35,5 @@
 .header__links{
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
-
-

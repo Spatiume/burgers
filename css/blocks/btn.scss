@@ -20,4 +20,9 @@
     padding: rem(8px) rem(12px);
   }
 
+  @include tablets {
+    padding: 10px 20px;
+    margin:0;
+  }
+
 }

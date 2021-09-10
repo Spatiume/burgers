@@ -1,6 +1,6 @@
 .scroll-down{
   position: absolute;
-  bottom: 36px;
+  bottom: rem(36px);
   left:50%;
   transform:translate(-50%);
 }

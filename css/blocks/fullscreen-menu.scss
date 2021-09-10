@@ -11,21 +11,21 @@
 
   .fullscreen-menu__close {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: rem(30px);
+    height: rem(30px);
     position: absolute;
-    top: 20px;
-    right: 36px;
+    top: rem(20px);
+    right: rem(36px);
 
     &::before,
     &::after{
       content: "";
       position: absolute;
-      top: 11px;
-      left: -4px;
-      width: 36px;
-      height: 6px;
-      border-radius: 1px;
+      top: rem(11px);
+      left: rem(-4px);
+      width: rem(36px);
+      height: rem(6px);
+      border-radius: rem(1px);
       background: white;
     }
 

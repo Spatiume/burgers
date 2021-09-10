@@ -23,7 +23,7 @@
   display: flex;
   width: 100%;
   padding: 6% 0% 12% 0%;
-  margin-left: 100px;
+  margin-left: rem(100px);
   max-width: rem(940px);
   display: none;
     &:first-child{
@@ -34,15 +34,15 @@
 
 .slidermenu__arrow-scroll {
   position: absolute;
-  top: 251px;
+  top: 47%;
   transform: translateY(-50%);
 
   &--right {
-    right: -40px;
+    right: -4%;
   }
 
   &--left {
-    left: -40px;
+    left: -4%;
   }
 }
 
@@ -61,7 +61,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  max-height: 350px;
+  max-height: rem(350px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,10 +70,10 @@
 .slidermenu__structure {
   position: absolute;
   border-radius: 3%;
-  top: -44px;
-  left: -2px;
-  width: 90px;
-  height: 90px;
+  top: rem(-44px);
+  left: rem(-2px);
+  width: rem(90px);
+  height: rem(90px);
   background: #eb8c38;
 
   &:hover {
@@ -96,24 +96,24 @@
 
 .slidermenu__structure-title {
   position: absolute;
-  top: 60px;
-  left: 23px;
+  top: rem(60px);
+  left: rem(23px);
   @include gagalin();
   font-weight: normal;
-  font-size: 16px;
+  font-size: rem(16px);
   color: white;
-  letter-spacing: -1px;
+  letter-spacing: rem(-1px);
 }
 
 .slidermenu__structure__list {
   position: absolute;
   top: 0;
-  left: 91px;
+  left: rem(91px);
   background: rgba(255, 255, 255, 0.85);
-  border-radius: 3px;
+  border-radius: rem(3px);
   display: flex;
   flex-direction: column;
-  width: 270px;
+  width: rem(270px);
   padding: 10%;
   display: none;
 }
@@ -125,21 +125,21 @@
   align-items: center;
   justify-content: space-between;
   padding: 2%;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 600;
 }
 
 .slidermenu__structure__icon {
-  width: 50px;
-  height: 45px;
-  margin-right: 14px;
+  width: rem(50px);
+  height: rem(45px);
+  margin-right: rem(14px);
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
 .slidermenu__structure__name {
-  margin-right: 14px;
+  margin-right: rem(14px);
 }
 
 .slidermenu__structure__weight {
@@ -151,20 +151,20 @@
 
 .slidermenu__calories {
   position: absolute;
-  top: 349px;
-  left: -1px;
-  width: 65px;
-  height: 65px;
+  top: rem(349px);
+  left: rem(-1px);
+  width: rem(65px);
+  height: rem(65px);
 
   &-info {
-    line-height: 34px;
+    line-height: rem(34px);
     text-align: center;
     position: absolute;
-    top: 21px;
-    left: -2px;
+    top: rem(21px);
+    left: rem(-2px);
     @include gagalin();
     font-weight: normal;
-    font-size: 20px;
+    font-size: rem(20px);
     color: white;
   }
 }
@@ -182,7 +182,7 @@
 }
 
 .slidermenu__title {
-  margin-bottom: 45px;
+  margin-bottom: rem(45px);
 }
 
 .slidermenu__info {
@@ -191,8 +191,8 @@
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
-  line-height: 24px;
-  margin-bottom: 29px;
+  line-height: rem(24px);
+  margin-bottom: rem(29px);
   flex:1;
 }
 
@@ -209,22 +209,22 @@
   color: $orange;
   @include gagalin();
   font-weight: normal;
-  font-size: 29px;
-  margin-right: 20px;
+  font-size: rem(29px);
+  margin-right: rem(20px);
   display: flex;
   align-items: flex-end;
   letter-spacing: -0.8px;
-  margin-right: 28px;
-  padding-bottom: 5px;
+  margin-right: rem(28px);
+  padding-bottom: rem(5px);
 }
 
 .slider__pricetotal {
-  font-size: 72px;
-  padding-right: 6px;
+  font-size: rem(72px);
+  padding-right: rem(6px);
 }
 
 .slidermenu__btn{
  position: absolute;
- top: 31px;
- left: 231px; 
+ top: rem(31px);
+ left: rem(231px); 
 }

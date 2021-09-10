@@ -1,8 +1,8 @@
 .order {
   display: flex;
   color: #e0e0e0;
-  padding: 24px 0px;
-  letter-spacing: -1px;
+  padding: rem(24px) rem(0px);
+  letter-spacing: rem(-1px);
 
 
   @include tablets{
@@ -56,7 +56,7 @@
 
 .order__input {
   width: 100%;
-  padding: 6px 20px;
+  padding: rem(6px) rem(20px);
   border: rem(2px) solid transparent;
   border-radius: rem(4px);
 }
@@ -69,18 +69,18 @@
 .order__input--textarea {
   resize: initial;
   height: rem(110px);
-  margin-bottom: 9px;
+  margin-bottom: rem(9px);
 }
 
 .order__switch-controls{
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .switch-controls__elem{
-  margin-right: 20px;
+  margin-right: rem(20px);
   
   &:last-child{
-    margin-right: 0px;
+    margin-right: rem(0px);
   }
 }
 .switch-controls__elem-title {
@@ -135,7 +135,7 @@
   position: relative;
   margin-right: calc(rem(44px) - 24px);
   margin-left: rem(24px);
-  margin-bottom: 18px;
+  margin-bottom: rem(18px);
 
 
 

@@ -12,19 +12,19 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  max-width: 240px;
+  max-width: rem(240px);
   height: 100%;
 }
 
 .burgermenu__title {
   position: absolute;
-  left: 95px;
-  top: 100px;
+  left: rem(95px);
+  top: rem(100px);
 }
 
 .burgermenu__trigger {
   text-decoration: none;
-  width: 80px;
+  width: rem(80px);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -34,8 +34,8 @@
   &__title {
     @include gagalin();
     font-weight: normal;
-    font-size: 41px;
-    letter-spacing: -1px;
+    font-size: rem(41px);
+    letter-spacing: rem(-1px);
     color: white;
     white-space: nowrap;
     text-transform: uppercase;

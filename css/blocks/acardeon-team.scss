@@ -7,7 +7,7 @@
   opacity: 0.93;
   height: 100%;
   left: 51%;
-  padding: 95px 34px 0 97px;
+  padding: rem(95px) rem(34px) 0 rem(97px);
 }
 
 .team__list{
@@ -27,31 +27,31 @@
   text-transform: uppercase;
   text-decoration: none;
   @include gagalin();
-  line-height: 14px;
-  margin-bottom: 37px;
+  line-height: rem(14px);
+  margin-bottom: rem(37px);
   display: block;
 
   &::before{
     position: absolute;
     content: "";
     background: url('../img/icons/arrowteam-down.svg') center center / cover no-repeat;;
-    top: 5px;
-    left: -20px;
-    height: 6px;
-    width: 10px;
+    top: rem(5px);
+    left: rem(-20px);
+    height: rem(6px);
+    width: rem(10px);
   }
 }
 
 .team__info{
   display: none; 
   @include ubuntu();
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  padding: 14px 44px 43px 0px;
+  padding: rem(14px) rem(44px) rem(43px) rem(0px);
   .team__info-left{
     .team__info-title{
       font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: rem(14px);
     }
   }
 }
@@ -68,10 +68,10 @@
       position: absolute;
       content: "";
       background: url('../img/icons/arrowteam.svg') center center / cover no-repeat;;
-      top: 5px;
-      left: -20px;
-      height: 6px;
-      width: 10px;
+      top: rem(5px);
+      left: rem(-20px);
+      height: rem(6px);
+      width: rem(10px);
     }
   }
   }
@@ -96,10 +96,10 @@
 
 .team__info-left{
   width: 70%;
-  margin-left: 26px;
+  margin-left: rem(26px);
 }
 
 .team__info-text{
-  line-height: 23px;
+  line-height: rem(23px);
   letter-spacing: -0.1px;
 }

@@ -1744,6 +1744,21 @@ input {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+@media screen and (max-width: 800px) {
+  .slidermenu__arrow-scroll--right {
+    right: 2%;
+  }
+  .slidermenu__arrow-scroll--left {
+    left: 2%;
+  }
 }
 .slidermenu__arrow-scroll--right {
   right: -2%;

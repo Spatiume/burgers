@@ -54,11 +54,12 @@
 }
 
 .team__info {
-  display: none;
+  display: flex;
+  height: 0;
+  overflow: hidden;
   @include ubuntu();
   font-size: rem(14px);
   font-weight: 300;
-  padding: rem(14px) rem(53px) rem(39px) rem(0px);
 
   .team__info-left {
     .team__info-title {
@@ -71,15 +72,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    
   }
 
 }
 
 .team__item--active {
   .team__info {
-    display: flex;
+    height: 100%;
+    padding: rem(14px) rem(53px) rem(39px) rem(0px);
     padding-left: 5%;
+
+    @include tablets {
+      padding: 5%;
+    }
 
   }
 

@@ -1,48 +1,76 @@
-// .slider__container {
-//   width: 92%;
-//   max-width: unset;
-// }
-
-.slider{
-  justify-content: flex-start;
-  padding-top: 7%;
+.slider__container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.slidermenu{
+.slidermenu {
   width: 100%;
   height: 100%;
+  position: relative;
+  max-height: 475px;
+
+   @include tablets {
+  max-height: 100%; 
+  }
 }
 
-.slidermenu__items{
+.slidermenu__items {
   display: flex;
   position: relative;
-  width: fit-content;
+  width: 100%;
+  height: 100%;
 }
 
 .slidermenu__item {
   display: flex;
   width: 100%;
-  padding: 6% 0% 12% 0%;
+  height: 100%;
   margin-left: rem(100px);
   max-width: rem(940px);
   display: none;
-    &:first-child{
-      margin-left: 0;
-      display: flex;
-    }
+  padding-bottom: 1%;
+
+
+  &:first-child {
+    margin-left: 0;
+    display: flex;
+  }
+
+  @include tablets {
+    flex-direction: column;
+    text-align: center;
+    padding: 10% 15%;
+
+  }
+
 }
 
 .slidermenu__arrow-scroll {
   position: absolute;
-  top: 47%;
+  top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @include tablets {
+    &--right {
+      right: 2%;
+    }
+  
+    &--left {
+      left: 2%;
+    }  
+  }
+
 
   &--right {
-    right: -4%;
+    right: -2%;
   }
 
   &--left {
-    left: -4%;
+    left: -2%;
   }
 }
 
@@ -54,6 +82,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 7% 0;
+
+  @include tablets {
+    width: 100%;
+    height: 50%;
+  }
 
 }
 
@@ -61,7 +95,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  max-height: rem(350px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,8 +103,8 @@
 .slidermenu__structure {
   position: absolute;
   border-radius: 3%;
-  top: rem(-44px);
-  left: rem(-2px);
+  top: 0%;
+  left: 0;
   width: rem(90px);
   height: rem(90px);
   background: #eb8c38;
@@ -151,10 +184,17 @@
 
 .slidermenu__calories {
   position: absolute;
-  top: rem(349px);
-  left: rem(-1px);
+  bottom: 0;
+  left: 0;
   width: rem(65px);
   height: rem(65px);
+
+  @include tablets {
+    left: unset;
+    bottom: unset;
+    top: 0;
+    right: 0;
+  }
 
   &-info {
     line-height: rem(34px);
@@ -172,35 +212,51 @@
 
 .slidermenu__right-col {
   width: 50%;
-  height: 58vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-left: 1%;
   padding-right: 2%;
+
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    padding: 0%;
+    justify-content: flex-start;
+  }
+
 }
 
 .slidermenu__title {
-  margin-bottom: rem(45px);
+  margin-bottom: 9%;
+
+
+      @include tablets {
+        margin-bottom: 2%;
+        align-items: center;
+      }
 }
 
 .slidermenu__info {
-  text-align: justify;
   color: white;
   font-family: "Ubuntu", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
   line-height: rem(24px);
-  margin-bottom: rem(29px);
-  flex:1;
+  margin-bottom: 7%;
 }
 
 .slidermenu__order {
+  width: 100%;
   display: flex;
   align-items: flex-end;
-  margin-bottom: auto;
-  position: relative;
+  justify-content: flex-start;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .slidermenu__price {
@@ -223,8 +279,6 @@
   padding-right: rem(6px);
 }
 
-.slidermenu__btn{
- position: absolute;
- top: rem(31px);
- left: rem(231px); 
+.slidermenu__btn {
+  display: block;
 }

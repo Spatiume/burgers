@@ -45,29 +45,25 @@ fullScreenMenuClose.addEventListener("click", function(e){
   fullScreenMenu.style.display = "none";
 });
 
+$(".menu__link").on('click', e =>{
+  $(fullScreenMenu).css({'display': 'none'});
+})
 
-// const step = 100;
-// const maxRight = 700;
-// const minRight = 0;
+    let teamItems = $('.team__item');
+    let teamItemLink = $('.team__link');
 
-// let currentRight = 0;
+    $('.team__link').on('click', (e)=>{
+      e.preventDefault();
 
-// items.style.right = currentRight;
+      $(e.currentTarget).closest('.team__item').toggleClass('team__item--active');
+      $(e.currentTarget).closest('.team__item').siblings('.team__item').removeClass('team__item--active');      
+    })
 
-// right.addEventListener("click", function (e) {
-//   e.preventDefault();
+    
 
-  // if(currentRight<maxRight){
-  //   currentRight+=step;
-  //   items.style.right=currentRight+"px";
-  // }
-// });
+    $('.burgermenu__trigger').on('click', e =>{
+      e.preventDefault();
 
-// left.addEventListener("click", function(e){
-//   e.preventDefault();
-
-//   if(currentRight>minRight){
-//     currentRight-=step;
-//     items.style.right=currentRight+"px";
-//   }
-// })
+      $(e.currentTarget).closest('.burgermenu__item').toggleClass('burgermenu__item--active');
+      $(e.currentTarget).closest('.burgermenu__item').siblings('.burgermenu__item').removeClass('burgermenu__item--active');
+    })

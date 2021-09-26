@@ -117,11 +117,6 @@
     <section class="section slider" id="slider">
       <div class="container slider__container">
         <div class="slidermenu">
-          <a href="#" class="slidermenu__arrow-scroll slidermenu__arrow-scroll--left">
-            <svg class="sprite__scroll sprite__scroll-left">
-              <use xlink:href="./css/sprite.svg#arrow-scroll"></use>
-            </svg>
-          </a>
           <ul class="slidermenu__items">
             <li class="slidermenu__item">
               <div class="slidermenu__left-col">
@@ -254,7 +249,7 @@
               </div>
               <div class="slidermenu__right-col">
                 <div class="section__title section__title--color-white slidermenu__title">
-                  chicken bacon burger
+                  chicken bacon
                 </div>
                 <div class="slidermenu__info">
                   Это бутерброд с повышенными питательными свойствами и высокой калорийностью.Сэндвич готовится из
@@ -494,11 +489,6 @@
               </div>
             </li>
           </ul>
-          <a href="#" class="slidermenu__arrow-scroll slidermenu__arrow-scroll--right">
-            <svg class="sprite__scroll sprite__scroll-right">
-              <use xlink:href="./css/sprite.svg#arrow-scroll"></use>
-            </svg>
-          </a>
         </div>
       </div>
     </section>
@@ -728,16 +718,18 @@
     <section class="section order-section" id="order">
       <div class="container">
         <h2 class="section__title section__title--centered">Закажите доставку</h2>
-        <form class="order">
+        <form class="orderForm">
           <div class="order__left-col">
             <div class="order__row">
               <label class="order__block">
                 <div class="order__title">Имя</div>
-                <input type="text" class="order__input">
+                <input type="text" class="order__input" name="name" required>
+                <div class="order__row-error"></div>
               </label>
               <label class="order__block">
                 <div class="order__title">Телефон</div>
-                <input type="text" class="order__input">
+                <input type="text" class="order__input" name="phone" required>
+                <div class="order__row-error"></div>
               </label>
             </div>
             <div class="order__row">
@@ -769,7 +761,8 @@
             <div class="order__row">
               <label class="order__block">
                 <div class="order__title">Комментарий</div>
-                <textarea class="order__input order__input--textarea"></textarea>
+                <textarea class="order__input order__input--textarea" name="comment" required></textarea>
+                <div class="order__row-error"></div>
               </label>
             </div>
             <div class="order__row order__switch-controls">
@@ -789,7 +782,7 @@
               </label>
             </div>
             <div class="order__row order__buttons">
-              <input type="submit" class="btn order__btn" value="Заказать">
+              <input type="submit" class="btn order__btn" id="order__btn" value="Заказать">
               <input type="reset" class="btn order__btn order__btn-clear " value="Очистить">
 
             </div>
@@ -885,7 +878,8 @@
     </nav>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./test3.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./test3.js"></script>
 </body>
 
 </html>

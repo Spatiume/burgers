@@ -13,7 +13,13 @@
   align-items: stretch;
   max-width: 72%;
   height: 100%;
+
+  @include tablets{
+    max-width: 100%;
+  }
 }
+
+
 
 .burgermenu__item {
   display: flex;
@@ -21,16 +27,17 @@
   position: relative;
 
   .burgermenu__content {
-    display: none;
+    display: flex;
     z-index: 10;
-    width: 100%;
-    padding: 10% 5%;
+    width: 0;
+    overflow: hidden;
     background: rgba(88, 88, 88, 0.85);
   }
 
   &--active {
     .burgermenu__content {
-      display: flex;
+      width: 100%;
+      padding: 10% 5%;
     }
 
     .burgermenu__trigger__title {

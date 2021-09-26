@@ -1,92 +1,56 @@
-.slider__container{
+.slider__container {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .slidermenu {
-  width: 100%;
+  width: 100vw;
+  padding: 0 10%;
   height: 100%;
   position: relative;
   max-height: 475px;
 
-   @include tablets {
-  max-height: 100%; 
+  @include tablets {
+    padding: 10% 15%;
+    max-height: unset;
   }
 }
 
 .slidermenu__items {
   display: flex;
   position: relative;
-  width: 100%;
-  height: 100%;
+  padding: 0 5%;
 }
 
 .slidermenu__item {
   display: flex;
-  width: 100%;
-  height: 100%;
-  margin-left: rem(100px);
-  max-width: rem(940px);
-  display: none;
-  padding-bottom: 1%;
-
-
-  &:first-child {
-    margin-left: 0;
-    display: flex;
-  }
+  width: 100vh;
+  height: 75vh;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7px;
 
   @include tablets {
     flex-direction: column;
     text-align: center;
-    padding: 10% 15%;
-
-  }
-
-}
-
-.slidermenu__arrow-scroll {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  height: 100%;
-
-  @include tablets {
-    &--right {
-      right: 2%;
-    }
-  
-    &--left {
-      left: 2%;
-    }  
-  }
-
-
-  &--right {
-    right: -2%;
-  }
-
-  &--left {
-    left: -2%;
+    height: 80vh;
   }
 }
-
 
 .slidermenu__left-col {
   width: 50%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  padding: 7% 0;
+
 
   @include tablets {
-    width: 100%;
     height: 50%;
+    width: 100%;
+    padding-top: 18%;
   }
 
 }
@@ -184,7 +148,7 @@
 
 .slidermenu__calories {
   position: absolute;
-  bottom: 0;
+  bottom: 3%;
   left: 0;
   width: rem(65px);
   height: rem(65px);
@@ -218,7 +182,6 @@
   justify-content: center;
   align-items: flex-start;
   padding-left: 1%;
-  padding-right: 2%;
 
   @include tablets {
     width: 100%;
@@ -232,11 +195,10 @@
 .slidermenu__title {
   margin-bottom: 9%;
 
-
-      @include tablets {
-        margin-bottom: 2%;
-        align-items: center;
-      }
+  @include tablets {
+    margin-bottom: 2%;
+    align-self: center;
+  }
 }
 
 .slidermenu__info {
@@ -246,6 +208,11 @@
   font-size: 0.875rem;
   line-height: rem(24px);
   margin-bottom: 7%;
+
+  @include tablets {
+    align-self: center;
+    margin-bottom: 2%;
+  }
 }
 
 .slidermenu__order {

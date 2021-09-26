@@ -1,4 +1,4 @@
-.order {
+.orderForm {
   display: flex;
   color: #e0e0e0;
   padding: rem(24px) rem(0px);
@@ -57,7 +57,7 @@
 .order__input {
   width: 100%;
   padding: rem(6px) rem(20px);
-  border: rem(2px) solid transparent;
+  border: 2px solid transparent;
   border-radius: rem(4px);
 }
 

@@ -15,6 +15,7 @@ $red: #e35028;
 
 //components
 @import "./blocks/sprite.scss";
+@import "./blocks/closebtn.scss";
 @import "./blocks/section.scss";
 @import "./blocks/header.scss";
 @import "./blocks/menu.scss";
@@ -40,3 +41,5 @@ $red: #e35028;
 @import "./blocks/work.scss";
 @import "./blocks/socials.scss";
 @import "./blocks/fullscreen-menu.scss";
+@import "./blocks/overlay.scss";
+@import "./blocks/maps.scss";

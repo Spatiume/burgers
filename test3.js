@@ -70,6 +70,11 @@ $('.burgermenu__trigger').on('click', e => {
   $(e.currentTarget).closest('.burgermenu__item').siblings('.burgermenu__item').removeClass('burgermenu__item--active');
 })
 
+$('.burgermenu__close').on('click', e=>{
+  e.preventDefault();
+
+  $('.burgermenu__trigger').click();
+});
 // order menu
 
 const orderForm = document.querySelector('.orderForm');
@@ -94,6 +99,8 @@ orderBtn.addEventListener('click', (e) => {
     xhr.send(JSON.stringify(data));
     xhr.addEventListener('load', () => {
       console.log(xhr.response.message);
+      overlayOrder.open();
+      overlayOrder.setContent(xhr.response.message);
     });
   }
 });
@@ -125,3 +132,64 @@ function validateField(field) {
   }
   return field.checkValidity();
 }
+
+
+//overlay
+
+// const openOverlay = document.querySelector('#openOverlay');
+const tamplateOrder = document.querySelector('#overlayOrder').innerHTML;
+const overlayOrder = createOverlay(tamplateOrder, 'tamplateOrder');
+
+// openOverlay.addEventListener('click', e => {
+//   overlay.open();
+//   overlay.setContent('Vse ok');
+// });
+
+function createOverlay(tamplate, classTamplate) {
+  const fragment = document.createElement('div');
+  fragment.innerHTML = tamplate;
+
+  const overlayElement = fragment.querySelector('.overlay');
+  const containerElement = fragment.querySelector('.overlay__container');
+  containerElement.classList.add(classTamplate);
+  const closeElement = fragment.querySelector('.overlay__close');
+  const contentElement = fragment.querySelector('.overlay__content');
+
+  overlayElement.addEventListener('click', e => {
+    if (e.target === overlayElement) {
+      closeElement.click();
+    }
+  });
+
+  closeElement.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.body.removeChild(overlayElement);
+  })
+
+  return {
+    open() {
+      document.body.appendChild(overlayElement);
+    },
+    close() {
+      closeElement.click();
+    },
+    setContent(content) {
+      contentElement.innerHTML = content;
+    }
+  }
+
+}
+
+// reviews 
+const tamplateReview = document.querySelector('#overlayReview').innerHTML;
+const overlayReview = createOverlay(tamplateReview);
+
+const reviewOverlayBtn = $('.review__btn');
+
+reviewOverlayBtn.on('click', e => {
+  e.preventDefault();
+  let reviewContent = $(e.currentTarget).siblings('.review__content').prop('outerHTML');
+
+  overlayReview.open();
+  overlayReview.setContent(reviewContent);
+})

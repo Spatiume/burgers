@@ -8,12 +8,28 @@
   height: 100%;
 }
 
-.reviews__item{
-  width: 25%;
-  height: 50%;
 
-  @include tablets{
+
+@media (orientation: landscape) {
+  .reviews__item{
+    width: 25%;
+    height: 50%;
+  }
+}
+
+@media (orientation: portrait) {
+  .reviews__item{
     width: 50%;
     height: 25%;
   }
 }
+
+// .reviews__item{
+//   width: 25%;
+//   height: 50%;
+
+//   @include tablets{
+//     width: 50%;
+//     height: 25%;
+//   }
+// }

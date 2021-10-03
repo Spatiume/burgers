@@ -1,8 +1,8 @@
 .footer {
-  height: rem(60px);
   background: url('../img/bg/bg9.png') center center / cover no-repeat;
   position: absolute;
   bottom: 0;
+  flex: 0;
 }
 
 .footer__container {
@@ -10,16 +10,29 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__col {
   width: 50%;
   padding: 0% 0%;
 
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
+
   &--left {
     display: flex;
     justify-content: flex-end;
     padding: 0;
+
+    @include phones {
+      justify-content: center;
+    }
   }
 
 }

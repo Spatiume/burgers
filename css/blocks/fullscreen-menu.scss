@@ -9,34 +9,17 @@
   display: none;
   justify-content: center;
 
-  .fullscreen-menu__close {
-    display: block;
-    width: rem(30px);
-    height: rem(30px);
-    position: absolute;
+  .closebtn{
     top: 5%;
-    right: 4%;
+    right: 6%;
 
+    width: 30px;
+    height: 30px;
+  
     &::before,
-    &::after{
-      content: "";
-      position: absolute;
-      top: rem(11px);
-      left: rem(-4px);
-      width: rem(36px);
-      height: rem(6px);
-      border-radius: rem(1px);
-      background: white;
-    }
-
-    &::before{
-      transform: rotate(45deg);
-    }
-
-    &::after{
-      transform: rotate(-45deg);
-    }
-
-
+        &::after{
+          background: white;
+        }
   }
 }
+

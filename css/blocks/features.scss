@@ -7,8 +7,16 @@
   display: flex;
   justify-content: space-between;
   padding: rem(36px) rem(11px) rem(25px) rem(10px);
+
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 .features__item {
   width: calc(100%/3 - 26px); //Расчитываем саму ширину элементов 
+
+  @include phones{
+    width: auto;
+  }
 }

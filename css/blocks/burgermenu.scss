@@ -32,13 +32,27 @@
     width: 0;
     overflow: hidden;
     background: rgba(88, 88, 88, 0.85);
+
+    .closebtn{
+      top:3%;
+      right:3%;
+      width: 25px;
+      height: 25px;
+      display: none;
+    }
   }
+
 
   &--active {
     .burgermenu__content {
       width: 100%;
-      padding: 10% 5%;
+      padding: 10% 9% 10% 5%;
+
+      .closebtn{
+        display: block;
+      }
     }
+
 
     .burgermenu__trigger__title {
       color: $yellow;

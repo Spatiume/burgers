@@ -1,0 +1,60 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay__content {
+  max-width: 70vw;
+  max-height: 70vh;
+  min-width: 30vw;
+  background: white;
+  border-radius: 5px;
+  padding: 5%;
+  color: black;
+
+  .review__info{
+    display: flex;
+   } 
+}
+
+.overlay__container {
+  .closebtn{
+    top: 2vh;
+    right: 2vw;
+  
+    width: rem(25px);
+    height: rem(25px);
+  
+    &::before,
+        &::after{
+          background: $orange;
+        }
+  } 
+}
+
+.tamplateOrder{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1%;
+
+  .overlay__content{
+  text-align: center;  
+  }
+}

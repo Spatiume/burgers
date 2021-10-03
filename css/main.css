@@ -2030,7 +2030,7 @@ ul.bxslider {
 }
 @media screen and (max-width: 768px) {
   .slidermenu {
-    padding: 6% 6%;
+    padding: 6% 8%;
     max-height: unset;
   }
 }

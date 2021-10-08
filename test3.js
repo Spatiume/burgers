@@ -70,7 +70,7 @@ $('.burgermenu__trigger').on('click', e => {
   $(e.currentTarget).closest('.burgermenu__item').siblings('.burgermenu__item').removeClass('burgermenu__item--active');
 })
 
-$('.burgermenu__close').on('click', e=>{
+$('.burgermenu__close').on('click', e => {
   e.preventDefault();
 
   $('.burgermenu__trigger').click();
@@ -193,3 +193,145 @@ reviewOverlayBtn.on('click', e => {
   overlayReview.open();
   overlayReview.setContent(reviewContent);
 })
+
+//one page scroll
+const sections = $('.section');
+const display = $('.maincontent');
+
+let inScroll = false; // есть ли перемещение
+
+
+const countSectionPosition = (sectionIndex) => {
+  const position = sectionIndex * (-100);
+  // console.log(position);
+  if (isNaN(position)) {
+    console.error("передано не верное значение в countSectionPositon");
+  }
+  return position;
+
+}
+
+const resetActiveClass = function (section, sectionIndex) {
+  section.eq(sectionIndex).addClass('active').siblings().removeClass('active');
+  $('.fixed-menu__item').eq(sectionIndex).addClass('active').siblings().removeClass('active');
+};
+
+const performTransition = (sectionIndex) => {
+  if (inScroll) return; // проверяем , есть ли перемещение сейчас
+  inScroll = true; //разрешаем перемещение
+  //определяем позицию секции и расчитываем значение перемещения
+  const position = countSectionPosition(sectionIndex);
+  const trasitionOver = 1000; // время задержки
+
+  //меняем активный класс
+  resetActiveClass(sections, sectionIndex);
+
+  //перемещяем maincontent на указанную позицию
+  display.css({
+    transform: `translateY(${position}%)`,
+  });
+
+  //устанавливаем время задержки
+  setTimeout(() => {
+    inScroll = false; //запрещяем перемещение
+    // resetActiveClass($(".fixed-menu__item"), sectionEq);
+  }, trasitionOver);
+
+}
+
+const pageScroll = function () {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  return {
+    next() {
+      // есть ли секция снизу
+      if (nextSection.length) {
+        performTransition(nextSection.index());
+      }
+    },
+    prev() {
+      // есть ли секция сверху
+      if (prevSection.length) {
+        performTransition(prevSection.index());
+      }
+    }
+  }
+
+};
+
+//обработка событий: 
+
+$(document).keydown(e => {
+  const targetName = e.target.tagName.toLowerCase();
+  const windowScroller = pageScroll();
+
+  if (targetName === 'body') {
+
+    if (e.key === "ArrowDown") {
+      // console.log('arrow down');
+      windowScroller.next();
+    } else if (e.key === "ArrowUp") {
+      windowScroller.prev();
+      // console.log('arrow up');
+    } else if (e.keyCode === 32) {
+      // console.log("space");
+      windowScroller.next();
+    }
+  }
+});
+
+$('[scroll-to]').on('click', (e) => {
+  e.preventDefault();
+  // console.log(e.currentTarget);
+  let menuIndex = $(e.currentTarget).attr('scroll-to');
+  console.log(menuIndex);
+  performTransition(menuIndex);
+});
+
+$(window).on("wheel", (e) => {
+  const deltaY = e.originalEvent.deltaY;
+  const windowScroller = pageScroll();
+
+  if (deltaY > 0) {
+    windowScroller.next();
+  }
+
+  if (deltaY < 0) {
+    windowScroller.prev();
+  }
+});
+
+$('.scroll-down').on('click', e => {
+  e.preventDefault();
+  performTransition(1);
+});
+
+
+
+/// http://hgoebl.github.io/mobile-detect.js/
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+// console.log(isMobile);
+
+if (isMobile) {
+  // http://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+  $("body").swipe({
+    //Generic swipe handler for all directions
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      // console.log("You swiped " + direction );
+      const windowScroller = pageScroll();
+
+      if (direction === 'up') {
+        // console.log('up');
+        windowScroller.prev();
+      }
+
+      if (direction === 'down') {
+        // console.log('down');
+        windowScroller.next();
+      }
+    }
+  });
+}

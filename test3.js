@@ -1,27 +1,9 @@
-// // slidermenu my
-
-// const left = document.querySelector(".slidermenu__arrow-scroll--left");
-// const right = document.querySelector(".slidermenu__arrow-scroll--right");
-// const items = document.querySelector(".slidermenu__items");
-
-// right.addEventListener("click", function (e) {
-//   loop("right", e);
-// });
-
-// left.addEventListener("click", function (e) {
-//   loop("left", e);
-// });
-
-// function loop(direction, e) {
-//   e.preventDefault();
-
-//   if (direction === "right") {
-//     items.appendChild(items.firstElementChild);
-//   } else {
-//     items.insertBefore(items.lastElementChild,
-//       items.firstElementChild);
-//   }
-// };
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 
 // box slider
 $(document).ready(function () {

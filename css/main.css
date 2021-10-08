@@ -692,6 +692,11 @@ input {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .section {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
 .section--align--top {
   -webkit-box-pack: start;
       -ms-flex-pack: start;

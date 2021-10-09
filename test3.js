@@ -309,12 +309,12 @@ if (isMobile) {
 
       if (direction === 'up') {
         // console.log('up');
-        windowScroller.prev();
+        windowScroller.next();
       }
 
       if (direction === 'down') {
         // console.log('down');
-        windowScroller.next();
+        windowScroller.prev();
       }
     }
   });

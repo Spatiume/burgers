@@ -2045,16 +2045,23 @@ ul.bxslider {
 }
 
 .slidermenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
-  padding: 0 10%;
-  height: 100%;
+  height: 90vh;
+  padding: 10% 10%;
   position: relative;
-  max-height: 475px;
 }
 @media screen and (max-width: 768px) {
   .slidermenu {
     padding: 6% 8%;
-    max-height: unset;
   }
 }
 
@@ -2076,7 +2083,6 @@ ul.bxslider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100vh;
   height: 75vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2107,11 +2113,14 @@ ul.bxslider {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  min-height: 475px;
 }
 @media screen and (max-width: 768px) {
   .slidermenu__item .slidermenu__left-col {
     height: 50%;
     width: 100%;
+    min-height: unset;
   }
 }
 .slidermenu__item .slidermenu__right-col {
@@ -2162,6 +2171,7 @@ ul.bxslider {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 78%;
 }
 @media screen and (max-width: 768px) {
   .slidermenu__left-col .slidermenu__img {

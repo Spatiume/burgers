@@ -205,7 +205,7 @@ const performTransition = (sectionIndex) => {
   inScroll = true; //разрешаем перемещение
   //определяем позицию секции и расчитываем значение перемещения
   const position = countSectionPosition(sectionIndex);
-  const trasitionOver = 1000; // время задержки
+  const trasitionOver = 600; // время задержки
 
   //меняем активный класс
   resetActiveClass(sections, sectionIndex);

@@ -1846,7 +1846,7 @@ input {
 .bx-wrapper {
   position: relative;
   margin-bottom: 60px;
-  padding: 0;
+  padding: 8% 0;
   *zoom: 1;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
@@ -2099,7 +2099,7 @@ ul.bxslider {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    height: 90vh;
+    height: 85vh;
   }
 }
 .slidermenu__item .slidermenu__left-col {
@@ -2176,6 +2176,10 @@ ul.bxslider {
 @media screen and (max-width: 768px) {
   .slidermenu__left-col .slidermenu__img {
     max-width: 70%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-bottom: 10%;
   }
 }
 

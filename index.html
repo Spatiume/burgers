@@ -761,8 +761,33 @@
 
         </ul>
       </section>
-      <section class="section work" id="work">
-        <div class="section__title section__title--color-black work__title">Как мы работаем</div>
+      <section class="section work player-section" id="work">
+        <div class="container">
+          <div class="section__title section__title--color-black work__title">Как мы работаем</div>
+          <div class="player-section__container">
+            <div class="player">
+              <div class="player__wrapper">
+                <div id="yt-player" class="player__elem"></div>
+                <div class="player__splash"></div>
+              </div>
+              <div class="player__controls">
+                <button class="player__start"></button>
+                <div class="player__playback">
+                  <button class="player__playback-button"></button>
+                </div>
+                <div class="player__duration">
+                  <span class="player__duration-completed">0:00</span> :
+                  <span class="player__duration-estimate">0:00</span>
+                </div>
+                <div class="player__volume">
+                  <button class="player__volume-button"></button>
+                  <div class="player__volume-level">
+                    <button class="player__volume-level-button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
       <section class="section order-section" id="order">
         <div class="container">
@@ -839,8 +864,8 @@
           </form>
         </div>
       </section>
-      <section class="section map" id="map">
-        <div class="maps yandexmap"></div>
+      <section class="section contacts">
+        <div class="map yandexmap" id="map"></div>
         <footer class="footer">
           <div class="container footer__container">
             <div class="footer__col">
@@ -948,6 +973,9 @@
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src='./player.js'></script>
   <script src="./test3.js"></script>
 </body>
 

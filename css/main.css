@@ -1791,6 +1791,7 @@ input {
     width: auto;
     height: 50%;
     max-height: 5.625rem;
+    max-width: 5.625rem;
   }
 }
 

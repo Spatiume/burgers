@@ -1,9 +1,0 @@
-.maps {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background: url("../img/bg/map.png") center center/cover no-repeat;
-}

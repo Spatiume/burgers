@@ -1704,17 +1704,17 @@ ul.bxslider {
 
 .burgermenu__item {
   display: flex;
-  max-width: 53%;
+  flex-basis: 53%;
   flex-direction: row;
   position: relative;
   align-items: stretch;
   justify-content: flex-end; }
   @media screen and (max-width: 768px) and (orientation: portrait) {
     .burgermenu__item {
-      max-width: 100%; } }
+      flex-basis: 100%; } }
   @media screen and (max-height: 600px) and (orientation: landscape) {
     .burgermenu__item {
-      max-width: 100%; } }
+      flex-basis: 100%; } }
   .burgermenu__item .burgermenu__content {
     display: block;
     z-index: 10;

@@ -1,0 +1,41 @@
+.feature{
+  display: flex;
+  flex-direction: column;
+
+  @include phones{
+    flex-direction: row;
+  }
+}
+
+.feature__img{  
+  display: flex;
+  justify-content: center;
+  height: rem(90px);
+  margin-bottom: rem(25px);
+
+  @include phones {
+    width: 30%;
+    margin-right: rem(20px);
+  }
+}
+
+.feature__content{
+  text-align: justify;
+  color: #2f3234;
+  @include ubuntu(light);
+  font-size: rem(14px);
+  line-height: 1.85;
+  
+      .feature__title{
+        text-align: center;
+        @include lifehack();
+        font-size: rem(24px);
+        margin-bottom: rem(12px);
+        line-height: rem(32px);
+      }
+
+      @include phones {
+        width: 65%;
+        text-align: left;
+      }
+}

@@ -1,0 +1,27 @@
+.features {
+  background: url('../img/bg/bg2.png') center center / cover no-repeat;
+  display: flex;
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  padding: rem(36px) rem(11px) rem(25px) rem(10px);
+
+  @include tablets-landscape {
+    padding: 0;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.features__item {
+  width: calc(100%/3 - 26px); //Расчитываем саму ширину элементов 
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}

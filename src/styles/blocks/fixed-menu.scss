@@ -1,0 +1,47 @@
+.fixed-menu {
+  position: fixed;
+  top: rem(90px);
+  right: rem(49px);
+  z-index: 1000;
+
+  @include laptops {
+    display: none;
+  }
+
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+}
+
+.fixed-menu__list {
+  display: flex;
+  flex-direction: column;
+
+  .fixed-menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(16px);
+    height: rem(16px);
+    margin-bottom: rem(5.25px);
+  }
+  
+  .active {
+    border: rem(1px) solid white;
+    border-radius: 50%;
+  }
+    
+  .fixed-menu__link {
+    display: block;
+    width: rem(6px);
+    height: rem(6px);
+    background-color: white;
+    border-radius: 50%;
+  }
+}
+

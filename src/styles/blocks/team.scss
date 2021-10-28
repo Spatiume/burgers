@@ -1,0 +1,15 @@
+.team {
+  background: url("../img/bg/bg4.png") center center / cover no-repeat;
+  color: #fff;
+  position: relative;
+
+
+  .section__title {
+    margin-bottom: rem(51px);
+
+    @include tablets-landscape {
+      text-align: center;
+      margin-bottom: 2%;
+    }
+  }
+}

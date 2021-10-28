@@ -1,0 +1,19 @@
+.work {
+  background: url("../img/bg/bg7.png") center center / cover no-repeat;
+  color: #fff;
+  position: relative;
+
+}
+
+.work__title {
+  font-size: rem(61px);
+  text-align: center;
+}
+
+.player-section__container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,85 @@
+.review {
+  position: relative;
+  color: #fff;
+
+  &:hover {
+    .review__hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.review__img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.review__pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.review__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(.8);
+  transition: 0.3s;
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets {
+    text-align: center;
+    padding: 2%;
+  }
+}
+
+.review__content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 85%;
+
+  @include phones {
+    .review__info {
+      display: none;
+    }
+  }
+
+  .review__username {
+    // line-height: rem(28px);
+    text-transform: uppercase;
+    @include gagalin();
+    font-size: rem(14px);
+    margin: 0;
+  }
+
+  .review__info {
+    font-size: rem(14px);
+    line-height: rem(24px);
+    @include ubuntu(light);
+    flex-direction: column;
+    overflow: hidden;
+    text-overflow: clip;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.review__btn {
+  max-height: 15%;
+}

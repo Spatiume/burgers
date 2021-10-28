@@ -1,0 +1,47 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+
+  @include tablets {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  @include tablets-landscape {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  object-fit: cover;
+
+  &--align--top {
+    justify-content: flex-start;
+  }
+}
+
+.section__title {
+  font-size: rem(72px);
+  color: $yellow;
+  margin-bottom: rem(31px);
+  @include gagalin();
+  line-height: 1;
+  margin-bottom: rem(15px);
+
+  @include tablets-landscape {
+    font-size: rem(48px);
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &--color-black {
+    color: $black;
+  }
+
+  &--color-white {
+    color: white;
+    line-height: rem(66px);
+  }
+}

@@ -1,0 +1,25 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials__item {
+  width: rem(25px);
+  height: rem(25px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: rem(7px);
+  margin-left: rem(15px);
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.socials__link {
+  display: block;
+}

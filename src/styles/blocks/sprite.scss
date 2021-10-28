@@ -1,0 +1,76 @@
+.sprite__scroll {
+  height: rem(20px);
+  width: rem(20px);
+
+  &-down {
+    height: rem(15px);
+  }
+
+  &-right {
+    transform: rotate(-90deg);
+    height: rem(20px);
+    width: rem(30px);
+  }
+
+  &-left {
+    transform: rotate(90deg);
+    height: rem(20px);
+    width: rem(30px);
+  }
+}
+
+.sprite__natural {
+  width: rem(88px);
+  height: rem(75px);
+}
+
+.sprite__meat {
+  width: rem(96px);
+  height: rem(89px);
+}
+
+.sprite__hand {
+  width: rem(73px);
+  height: rem(85px);
+}
+
+
+.sprite__phone {
+  width: rem(11px);
+  height: rem(11px);
+}
+
+.sprite__socials{
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.sprite__burger{
+  height: rem(45px);
+  width: rem(45px);
+}
+
+.sprite__kkal{
+  width: rem(60px);
+  height: rem(60px);
+}
+
+// .sprite__vk {
+//   width: rem(37px);
+//   height: rem(37px);
+// }
+
+// .sprite__facebook {
+//   width: rem(37px);
+//   height: rem(37px);
+// }
+
+// .sprite__instagram {
+//   width: rem(37px);
+//   height: rem(37px);
+// }
+
+// .sprite__twitter {
+//   width: rem(37px);
+//   height: rem(37px);
+// }

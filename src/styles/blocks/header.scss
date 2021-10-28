@@ -1,0 +1,48 @@
+.header{
+  display: flex;
+  align-items: center;
+  padding-top: 1.25%;
+  flex: 0 0 auto;
+  justify-content: space-between;
+
+  @include tablets {
+    padding-left: 1%;
+  }
+}
+
+.header__logo{
+  width: 11%;
+  min-width: rem(90px);
+  flex: 0 0 auto;
+
+  @include tablets-landscape {
+    width: 10%;
+    min-width: 0;
+  }
+}
+
+.logo{
+  display: block;
+}
+
+.header__menu{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  justify-content: flex-end;
+
+  @include tablets{
+    display: none;
+  }
+}
+
+.header__links{
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+
+  @include tablets {
+    margin-right: 5%;
+  }
+}

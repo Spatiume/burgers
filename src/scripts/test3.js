@@ -232,8 +232,8 @@ $(document).ready(function () {
 
   const pageScroll = function () {
     const activeSection = sections.filter('.active');
-    if (activeSection.index()===6){
-      player.pauseVideo();
+    if (activeSection.index() === 6) {
+      checkActivePlayer();
     };
     const nextSection = activeSection.next();
     const prevSection = activeSection.prev();
@@ -383,6 +383,11 @@ $(document).ready(function () {
 let player;
 const playerContainer = $(".player");
 
+function checkActivePlayer() {
+  if (playerContainer.hasClass("paused")) {
+    $(".player__start").click();
+  }
+}
 
 
 let eventsInit = () => {
@@ -540,6 +545,7 @@ function onYouTubeIframeAPIReady() {
     }
   });
 }
+
 
 eventsInit();
 

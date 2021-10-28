@@ -2,6 +2,13 @@
   position: relative;
   color: #fff;
 
+  @include tablets {
+    .review__hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   &:hover {
     .review__hover {
       opacity: 1;
@@ -75,8 +82,11 @@
     overflow: hidden;
     text-overflow: clip;
     display: -webkit-box;
-    -webkit-line-clamp: 7;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+    @include tablets{
+      -webkit-line-clamp: 3;
+    }
   }
 }
 

@@ -70,7 +70,7 @@ const libs = [
 task('scripts', () => {
   return src([...JS_LIBS, 'src/scripts/*.js'])
     .pipe(gulpif(env === 'dev', sourcemaps.init()))
-    .pipe(concat('main.min.js', { newLine: ';' }))
+    .pipe(concat('main.js', { newLine: ';' }))
     .pipe(gulpif(env === 'prod', babel({
       presets: ['@babel/env']
     })))

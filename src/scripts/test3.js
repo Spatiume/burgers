@@ -31,7 +31,7 @@ $(document).ready(function () {
 
   $(".menu__link").on('click', e => {
     $(fullScreenMenu).css({ 'display': 'none' });
-  })
+  });
 
 
 
@@ -47,10 +47,10 @@ $(document).ready(function () {
   })
 
   //burger menu
-
   $('.burgermenu__trigger').on('click', e => {
     e.preventDefault();
-    let item = $(e.currentTarget)
+    let item = $(e.currentTarget);
+
     item.closest('.burgermenu__item').toggleClass('burgermenu__item--active');
     item.closest('.burgermenu__item').siblings('.burgermenu__item').removeClass('burgermenu__item--active');
 
@@ -217,10 +217,6 @@ $(document).ready(function () {
 
     //меняем активный класс
     resetActiveClass(sections, sectionIndex);
-
-    if ((sectionIndex - 1) === 6 || (sectionIndex + 1) === 6) {
-      checkActivePlayer();
-    }
     //перемещяем maincontent на указанную позицию
     display.css({
       transform: `translateY(${position}%)`,
@@ -236,6 +232,9 @@ $(document).ready(function () {
 
   const pageScroll = function () {
     const activeSection = sections.filter('.active');
+    if (activeSection.index()===6){
+      player.pauseVideo();
+    };
     const nextSection = activeSection.next();
     const prevSection = activeSection.prev();
 
@@ -259,22 +258,20 @@ $(document).ready(function () {
   //обработка событий: 
 
   $(document).keydown(e => {
-    const targetName = e.target.tagName.toLowerCase();
+    const tagName = e.target.tagName.toLowerCase();
     const windowScroller = pageScroll();
+    const userTypingInInputs = tagName === "input" || tagName === "textarea";
 
-    if (targetName === 'body') {
+    if (userTypingInInputs) return;
 
-      if (e.key === "ArrowDown") {
-        // console.log('arrow down');
-        windowScroller.next();
-      } else if (e.key === "ArrowUp") {
-        windowScroller.prev();
-        // console.log('arrow up');
-      } else if (e.keyCode === 32) {
-        // console.log("space");
-        windowScroller.next();
-      }
+    if (e.key === "ArrowDown") {
+      windowScroller.next();
+    } else if (e.key === "ArrowUp") {
+      windowScroller.prev();
+    } else if (e.keyCode === 32) {
+      windowScroller.next();
     }
+
   });
 
   $('[scroll-to]').on('click', (e) => {
@@ -542,12 +539,7 @@ function onYouTubeIframeAPIReady() {
       modestbranding: 0
     }
   });
-
 }
 
-function checkActivePlayer() {
-  if (!($('.work').hasClass('active'))) {
-    player.pauseVideo();
-  }
-}
 eventsInit();
+

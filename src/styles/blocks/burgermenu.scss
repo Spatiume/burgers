@@ -29,7 +29,7 @@
   position: relative;
   align-items: stretch;
   justify-content: flex-end; // for transition
-
+  flex:0;
 
   .burgermenu__content {
     display: block;
@@ -49,6 +49,7 @@
 
 
   &--active {
+    flex: 1;
     .burgermenu__content {
 
       width: 100%;
